@@ -9,6 +9,7 @@ class IconButtonPushListCityWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      // TODO создай отдельный класс для храненияния методов навигации, в каждый метод передавай контекст,
       onPressed: () {
         Navigator.push(
           context,

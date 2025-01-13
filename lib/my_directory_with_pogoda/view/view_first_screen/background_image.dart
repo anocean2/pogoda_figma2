@@ -9,11 +9,13 @@ class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 813.1,
+      // TODO резина без фиксированных размеров, screen_utils
+      height: 813,
       width: 392.7,
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
+              // TODO все строки в константы
               'assets/image/фон.png',
             ),
             fit: BoxFit.fill),

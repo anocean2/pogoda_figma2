@@ -1,9 +1,9 @@
+import 'package:figma_pogoda2/my_directory_with_pogoda/state/state_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
 import 'my_custom_clipper.dart';
-import '../../../state/state_home_screen.dart';
 
 class ContainerForCityWeatherData extends StatelessWidget {
   const ContainerForCityWeatherData({super.key});
@@ -28,7 +28,7 @@ class ContainerForCityWeatherData extends StatelessWidget {
                         color: Colors.transparent,
                         child: InkWell(
                           onTap: () {
-                            state.onCityTap(jsonPogodaModel.location!.name.toString(), context);
+                            state.onCityTap(jsonPogodaModel.location?.name ?? '', context);
                             Navigator.of(context).pop();
                           },
                           borderRadius:

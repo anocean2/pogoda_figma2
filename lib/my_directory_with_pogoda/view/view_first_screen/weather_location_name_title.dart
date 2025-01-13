@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
+// TODO всегда бери путь от пакета
 import '../../state/state_home_screen.dart';
 class WeatherLocationNameTitle extends StatelessWidget {
   const WeatherLocationNameTitle({super.key});

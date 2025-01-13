@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 
+#TODO не нужно использовать слово json, слово Model лишнее
 class JsonPogodaModel {
   JsonPogodaModel({
     this.location,

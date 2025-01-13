@@ -8,9 +8,11 @@ part 'state_home_screen.g.dart';
 class WeatherState = WeatherStateBase with _$WeatherState;
 
 abstract class WeatherStateBase with Store {
+  #TODO получить объект репозитория либо через конструктор либо через getIt
   final repositoryArhitekture = RepositoryArhitekture();
 
   @observable
+  #TODO заменить var на final
   var currentCity = JsonPogodaModel();
 
   @observable
@@ -29,12 +31,14 @@ abstract class WeatherStateBase with Store {
     for (int i = 0; i <= listNameCity.length; i++) {
       final listResultCurrentCity =
           await repositoryArhitekture.fetchPogoda(listNameCity[i]);
+      #TODO ты не можешь использовать бенг оператор если не проверил на null
       listCurrentCity.add(listResultCurrentCity!);
     }
   }
 
   @action
   Future<void> loadPogodaModel({String? city}) async {
+
     final result =
         await repositoryArhitekture.fetchPogoda(city ?? listNameCity.first);
     if (result != null) {
@@ -42,6 +46,7 @@ abstract class WeatherStateBase with Store {
     }
   }
 
+  #TODO подкорректировать нейминг
   @action
   Future<void> addCityToObservableList(String city) async {
     listNameCity.add(city);
@@ -49,6 +54,7 @@ abstract class WeatherStateBase with Store {
     listCurrentCity.add(listResultCurrentCity!);
   }
 
+  #TODO убрать лишний контекст и контексты в стейты желательно
   @action
   Future<void> onCityTap(String city, BuildContext context) async {
     await loadPogodaModel(city: city);

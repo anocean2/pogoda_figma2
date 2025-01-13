@@ -3,7 +3,7 @@ description: "A new Flutter project. figma"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
+#TODO Удалить лишние все комментарии, это засоряет код
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-
+#TODO отсортировать по алфавиту пакеты
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -51,7 +51,7 @@ dev_dependencies:
     sdk: flutter
   build_runner:
   mobx_codegen:
-
+#TODO sort_imoprt пакет на pub.dev
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

@@ -30,6 +30,7 @@ class _ViewPogodaState extends State<ViewPogoda> {
             child: Column(
               children: [
                 SizedBox(
+                  #TODO все цифры нужно вынести в файл констант, инфраструктура
                   height: 100,
                 ),
                 WeatherLocationNameTitle(),
